@@ -1,13 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Showcase */
+.showcase {
+  background: url('./images/old-instagram-logo.jpg') no-repeat center/cover;
+  height: 500px;
+}
+
+.showcase .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 1024px) {
+  .showcase {
+    background-position: top;
+    height: 600px;
+  }
+
+  .showcase .overlay {
+    height: 600px;
+  }
+}
+
+/* Gallery */
+.gallery img {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+/* Login and signup */
+.login {
+  height: calc(100vh - 72px);
+  overflow: hidden;
+  background: url('./images/cassette.jpg') no-repeat center/cover;
+}
+
+.login .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 72px);
 }
